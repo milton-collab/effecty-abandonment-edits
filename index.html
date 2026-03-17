@@ -3,20 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Effecty: Abandonment Flow — Copy Edits for Gabriela</title>
+<title>Effecty: Abandonment Flow — Production Copy (7 Emails)</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Outfit', sans-serif;
-    color: #1a1a1a;
-    line-height: 1.7;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 60px 40px 80px;
-    background: #fff;
-    font-size: 15px;
-  }
+  body { font-family: 'Outfit', sans-serif; color: #1a1a1a; line-height: 1.7; max-width: 960px; margin: 0 auto; padding: 60px 40px 80px; background: #fff; font-size: 15px; }
   h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; color: #000; margin-bottom: 6px; line-height: 1.3; }
   h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 700; color: #000; margin-top: 56px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #000; }
   h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #000; margin-top: 36px; margin-bottom: 14px; }
@@ -27,183 +18,82 @@
   .subtitle { color: #555; font-size: 0.95rem; margin-bottom: 40px; }
   .logo { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: #e94560; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
   .confidential { display: inline-block; font-size: 0.75rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 1.5px; border: 1px solid #ddd; padding: 3px 10px; margin-bottom: 40px; }
-
-  /* Task list */
-  .task-list {
-    margin: 20px 0;
-    border: 2px solid #2563eb;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-  .task-list-header {
-    background: #2563eb;
-    color: #fff;
-    padding: 14px 20px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  .task-list-body { padding: 0; }
-  .task-item {
-    display: grid;
-    grid-template-columns: 32px 1fr;
-    gap: 10px;
-    padding: 12px 20px;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 0.9rem;
-    align-items: start;
-  }
-  .task-item:last-child { border-bottom: none; }
-  .task-checkbox {
-    width: 18px; height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 3px;
-    margin-top: 3px;
-  }
-  .task-label { line-height: 1.5; }
-  .task-email-tag {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    background: #f0f0f0;
-    padding: 2px 6px;
-    border-radius: 2px;
-    color: #666;
-    margin-right: 4px;
-    font-weight: 600;
-  }
+  .section-num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 4px; }
 
   /* Summary table */
-  .summary-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0 24px;
-    font-size: 0.88rem;
-  }
-  .summary-table th {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: #000;
-    color: #fff;
-    padding: 10px 12px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 0.82rem;
-  }
-  .summary-table td {
-    padding: 10px 12px;
-    border-bottom: 1px solid #e5e5e5;
-    vertical-align: top;
-    line-height: 1.5;
-  }
-  .summary-table tr:nth-child(even) { background: #fafafa; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.88rem; }
+  th { font-family: 'Plus Jakarta Sans', sans-serif; background: #000; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.82rem; }
+  td { padding: 10px 12px; border-bottom: 1px solid #e5e5e5; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) { background: #fafafa; }
 
-  /* Email card */
-  .email-card {
-    border: 1px solid #e5e5e5;
-    margin: 28px 0;
-    overflow: hidden;
-  }
-  .email-card-header {
-    padding: 16px 20px;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .email-card-header h3 { margin: 0; color: #fff; font-size: 1rem; }
-  .verdict {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    padding: 4px 10px;
-    border-radius: 3px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-  .verdict-few { background: #16a34a; }
-  .verdict-moderate { background: #ca8a04; }
-  .verdict-significant { background: #dc2626; }
+  /* Task list */
+  .task-list { margin: 20px 0; border: 2px solid #2563eb; overflow: hidden; border-radius: 4px; }
+  .task-list-header { background: #2563eb; color: #fff; padding: 14px 20px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1rem; }
+  .task-item { display: grid; grid-template-columns: 32px 1fr; gap: 10px; padding: 12px 20px; border-bottom: 1px solid #e5e5e5; font-size: 0.9rem; align-items: start; }
+  .task-item:last-child { border-bottom: none; }
+  .task-checkbox { width: 18px; height: 18px; border: 2px solid #ccc; border-radius: 3px; margin-top: 3px; }
+  .task-email-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; background: #f0f0f0; padding: 2px 6px; border-radius: 2px; color: #666; margin-right: 4px; font-weight: 600; }
 
-  .email-card-body { padding: 20px; }
+  /* Email block */
+  .email-block { border: 1px solid #e5e5e5; margin: 28px 0; overflow: hidden; }
+  .email-header { padding: 16px 20px; background: #000; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+  .email-header h3 { margin: 0; color: #fff; font-size: 1rem; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 4px 10px; border-radius: 3px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+  .tag-edit { background: #ca8a04; }
+  .tag-new { background: #2563eb; }
+  .tag-redo { background: #dc2626; }
+  .tag-keep { background: #16a34a; }
 
-  /* Change items */
-  .change-list { margin: 16px 0; }
-  .change-item {
-    border: 1px solid #e5e5e5;
-    margin: 12px 0;
-    overflow: hidden;
-  }
-  .change-item-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
-    background: #fafafa;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 0.88rem;
-  }
-  .change-num {
-    width: 24px; height: 24px;
-    background: #171717; color: #fff; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
-  }
-  .change-item-body { padding: 14px 16px; font-size: 0.9rem; }
+  .email-meta { padding: 14px 20px; background: #f7f7f7; border-bottom: 1px solid #e5e5e5; font-size: 0.85rem; }
+  .meta-row { display: grid; grid-template-columns: 120px 1fr; gap: 4px; margin-bottom: 4px; }
+  .meta-label { font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: #666; }
+  .email-body { padding: 20px; }
 
-  /* Before/after blocks */
-  .before-after {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 10px 0;
-  }
-  .before-block, .after-block {
-    padding: 12px 14px;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    border-radius: 4px;
-  }
-  .before-block { background: #fef2f2; border: 1px solid #fecaca; }
-  .after-block { background: #f0fdf4; border: 1px solid #bbf7d0; }
-  .ba-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1px;
-    margin-bottom: 6px; display: block;
-  }
-  .before-block .ba-label { color: #dc2626; }
-  .after-block .ba-label { color: #16a34a; }
+  /* SL table */
+  .sl-table { margin: 12px 0 20px; }
+  .sl-table th { font-size: 0.78rem; }
 
-  .keep-block {
-    background: #f0fdf4; border-left: 4px solid #16a34a;
-    padding: 12px 16px; margin: 12px 0; font-size: 0.88rem;
-  }
-  .keep-block strong { color: #16a34a; }
-  .why-block {
-    background: #eff6ff; border-left: 4px solid #2563eb;
-    padding: 10px 14px; margin: 8px 0;
-    font-size: 0.82rem; color: #333;
-  }
-  .add-block {
-    background: #eff6ff; border: 1px solid #bfdbfe;
-    padding: 14px 16px; margin: 10px 0; font-size: 0.88rem;
-  }
-  .add-block strong { color: #2563eb; }
+  /* Copy block */
+  .copy-block { background: #fafafa; border: 1px solid #e5e5e5; padding: 20px 24px; margin: 12px 0 16px; font-size: 0.92rem; line-height: 1.75; }
+  .copy-block p { margin-bottom: 12px; }
+  .copy-block p:last-child { margin-bottom: 0; }
+  .copy-block .hl { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; font-weight: 700; color: #000; margin-bottom: 16px; line-height: 1.3; }
+  .copy-block .sub-hl { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 600; color: #333; margin-top: 20px; margin-bottom: 8px; }
+  .copy-block .cta { display: inline-block; background: #171717; color: #fff; padding: 14px 40px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 0.95rem; border-radius: 8px; margin: 12px 0; letter-spacing: 0.3px; }
+  .copy-block .promo { display: block; text-align: center; border: 2px dashed #333; padding: 14px 24px; margin: 16px auto; max-width: 320px; background: #fff; }
+  .copy-block .promo .code { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 700; color: #000; display: block; letter-spacing: 2px; }
+  .copy-block .promo .code-label { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; display: block; }
+  .copy-block .badge { display: inline-block; background: #ced4bc; padding: 8px 18px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 0.85rem; color: #1a1a1a; border-radius: 4px; margin: 8px 0; }
+  .copy-block .step { display: grid; grid-template-columns: 40px 1fr; gap: 12px; margin: 10px 0; align-items: start; }
+  .copy-block .step-n { width: 32px; height: 32px; background: #171717; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.85rem; }
+  .copy-block .provider { display: flex; gap: 16px; align-items: center; padding: 14px 18px; background: #f7f9f5; border-radius: 8px; margin: 14px 0; }
+  .copy-block .provider-avatar { width: 64px; height: 64px; background: #ccc; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #666; flex-shrink: 0; text-align: center; font-weight: 600; line-height: 1.2; }
+  .copy-block .provider-name { font-weight: 700; font-size: 0.95rem; }
+  .copy-block .provider-cred { font-size: 0.8rem; color: #666; }
+  .copy-block .testi { border-left: 3px solid #ced4bc; padding: 12px 16px; margin: 12px 0; background: #f9faf6; }
+  .copy-block .testi .stars { color: #ca8a04; font-size: 1rem; margin-bottom: 4px; }
+  .copy-block .testi .tname { font-weight: 600; font-size: 0.85rem; color: #666; margin-top: 8px; }
+  .copy-block .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #e5e5e5; margin: 14px 0; }
+  .copy-block .compare-col { padding: 16px; }
+  .copy-block .compare-col:first-child { border-right: 1px solid #e5e5e5; }
+  .copy-block .compare-col h5 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; color: #000; }
+  .copy-block .compare-col ul { margin: 0 0 0 16px; font-size: 0.85rem; }
+  .copy-block .compare-col li { margin-bottom: 4px; }
 
-  .callout {
-    padding: 16px 20px; margin: 20px 0;
-    background: #f7f7f7; border-left: 4px solid #000;
-    font-size: 0.9rem; line-height: 1.65;
-  }
+  /* Gabriela task for this email */
+  .gab-task { background: #eff6ff; border: 1px solid #bfdbfe; padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; border-radius: 4px; }
+  .gab-task strong { color: #2563eb; }
+
+  /* Change note */
+  .change-note { background: #fefce8; border-left: 4px solid #ca8a04; padding: 10px 14px; margin: 12px 0; font-size: 0.82rem; }
+
+  /* Callout */
+  .callout { padding: 16px 20px; margin: 20px 0; background: #f7f7f7; border-left: 4px solid #000; font-size: 0.9rem; line-height: 1.65; }
   .callout-red { background: #fef2f2; border-left-color: #dc2626; }
-  .callout-gold { background: #fefce8; border-left-color: #ca8a04; }
+  .callout-blue { background: #eff6ff; border-left-color: #2563eb; }
 
   ul { margin: 6px 0 14px 20px; }
   li { margin-bottom: 5px; font-size: 0.9rem; line-height: 1.6; }
-  .section-num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 4px; }
   hr { margin: 48px 0; border: none; border-top: 1px solid #e0e0e0; }
   .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; }
   .footer-brand { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: #e94560; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
@@ -211,234 +101,193 @@
 
   @media (max-width: 768px) {
     body { padding: 30px 20px; }
-    .before-after { grid-template-columns: 1fr; }
-    .email-card-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .email-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .meta-row { grid-template-columns: 1fr; }
+    .copy-block .compare { grid-template-columns: 1fr; }
+    .copy-block .compare-col:first-child { border-right: none; border-bottom: 1px solid #e5e5e5; }
     .task-item { grid-template-columns: 24px 1fr; }
   }
-  @media print {
-    body { max-width: 100%; padding: 20px; }
-    .email-card, .change-item { break-inside: avoid; }
-  }
+  @media print { body { max-width: 100%; padding: 20px; } .email-block { break-inside: avoid; } }
 </style>
 </head>
 <body>
 
 <div class="logo">GrowthTrigger</div>
-<h1>Effecty: Abandonment Flow Edits</h1>
-<p class="subtitle">For Gabriela. Specific changes per email with exact replacement copy. | March 16, 2026</p>
+<h1>Effecty: Abandonment Flow Copy</h1>
+<p class="subtitle">7 emails. Production-ready copy for Gabriela. | March 17, 2026</p>
 <div class="confidential">Confidential</div>
 
 
 <!-- ================================================================ -->
-<!-- SECTION 1: CHANGES SUMMARY -->
+<span class="section-num">Section 01</span>
+<h2>Summary of Changes</h2>
 <!-- ================================================================ -->
 
-<span class="section-num">Section 01</span>
-<h2>All Changes at a Glance</h2>
-
-<p>There are <strong>7 emails</strong> in the current flow. Here's every change needed, sorted by email. Most changes are copy swaps and section deletions, not rebuilds.</p>
-
-<table class="summary-table">
-  <thead>
-    <tr><th>Email</th><th>Changes</th><th>Summary</th><th>Effort</th></tr>
-  </thead>
+<table>
+  <thead><tr><th>#</th><th>Email</th><th>Timing</th><th>What Changed</th><th>Effort</th></tr></thead>
   <tbody>
     <tr>
-      <td><strong>Email 1</strong><br>"Your GLP-1 Plan Starts Here"</td>
-      <td>3</td>
-      <td>
-        1. Swap CTA text to first-person ("Finish my questionnaire")<br>
-        2. Add clinical stat badge below product vials<br>
-        3. Tighten body copy (replace generic text with concrete next steps)
-      </td>
+      <td>1</td>
+      <td><strong>Recovery Reminder</strong></td>
+      <td>+1 hour</td>
+      <td>Swap CTAs to first-person. Add clinical stat badge. Tighten body copy to concrete next steps.</td>
       <td>30 min</td>
     </tr>
     <tr>
-      <td><strong>Email 2A</strong><br>"Take The Final Step"</td>
-      <td>5</td>
-      <td>
-        1. <strong>Replace 4-step brand values with 3-step patient journey</strong> (biggest single change)<br>
-        2. Shorten testimonials from 2 long quotes to 1 short + add patient photo<br>
-        3. Add pricing transparency line ("Plans from $XXX/mo")<br>
-        4. Add small Dr. Pagano provider block<br>
-        5. Kill 3 of the 4 CTAs (keep one: "See my treatment options")
-      </td>
+      <td>2</td>
+      <td><strong>"What to Expect"</strong><br><span style="color:#2563eb;font-size:0.8rem;">NEW EMAIL</span></td>
+      <td>+4-6 hours</td>
+      <td>Brand new micro-email. Replaces the killed 3B duplicate. Answers top 3 abandonment anxieties. Shortest email in flow.</td>
       <td>1-2 hrs</td>
     </tr>
     <tr>
-      <td><strong>Email 2B</strong><br>Robyn Plain Text</td>
       <td>3</td>
-      <td>
-        1. Fix broken preview text (Liquid merge tag showing as literal text)<br>
-        2. Update promo code: EFFECTY50 → EFFECTY100<br>
-        3. Cut FAQ from 7 questions to 3
-      </td>
+      <td><strong>Patient Journey</strong></td>
+      <td>+24 hours</td>
+      <td>Replace Innovation/Transparency/Accessibility/Safety with 3-step patient journey. Shorten testimonials + add photo. Add pricing. Add Dr. Pagano. Kill 3 of 4 CTAs.</td>
+      <td>1-2 hrs</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>Robyn Plain Text</strong><br><span style="color:#16a34a;font-size:0.8rem;">A/B WITH E3</span></td>
+      <td>+24 hours</td>
+      <td>Fix broken preview text. Update EFFECTY50 → EFFECTY100. Cut FAQ from 7 questions to 3.</td>
       <td>20 min</td>
     </tr>
     <tr>
-      <td><strong>Email 3A</strong><br>"We'd Love To Know!"</td>
-      <td>4</td>
-      <td>
-        1. Change purpose: feedback form → social proof email<br>
-        2. Kill entire product catalog (Liraglutide, Metformin, Ozempic, Mounjaro)<br>
-        3. Add Trustpilot rating + 3 short testimonials with photos<br>
-        4. Replace 9 buttons with 1 CTA
-      </td>
+      <td>5</td>
+      <td><strong>Social Proof</strong></td>
+      <td>+48-72 hours</td>
+      <td>Flip from feedback form + product catalog into Trustpilot rating + 3 objection-specific testimonials with photos. Kill 8 CTAs → 1.</td>
       <td>1-2 hrs</td>
     </tr>
     <tr>
-      <td><strong>Email 3B</strong><br>$125 Off duplicate</td>
-      <td>Kill</td>
-      <td>
-        Remove from flow. Nearly identical to Email 2A (same brand values block, same testimonials, different dollar amount). Wasting a touchpoint.
-      </td>
-      <td>5 min</td>
-    </tr>
-    <tr>
-      <td><strong>Email 4</strong><br>"Last Chance!"</td>
-      <td>5</td>
-      <td>
-        1. <strong>Fix wrong promo code</strong> (EFFECTY5 → EFFECTY100) and fix "Earn 6% Today" CTA<br>
-        2. Change headline to journey urgency ("We've Been Holding Your Spot")<br>
-        3. Kill brand values section (3rd time it appears in this flow)<br>
-        4. Kill "Looking For A Different Treatment?" cross-sell<br>
-        5. Kill "Something holding you back?" redirect to contact page
-      </td>
+      <td>6</td>
+      <td><strong>Urgency</strong></td>
+      <td>+5-7 days</td>
+      <td>Fix wrong code (EFFECTY5 → EFFECTY100). Journey urgency headline. Kill brand values (3rd appearance). Kill cross-sell. Kill contact redirect.</td>
       <td>1 hr</td>
     </tr>
     <tr>
-      <td><strong>Email 5</strong><br>"Looking Beyond Weight Loss?"</td>
-      <td>3</td>
-      <td>
-        1. <strong>Full content swap:</strong> HRT/Longevity catalog → Sema vs. Tirz comparison<br>
-        2. Add the EFFECTY100 promo code (currently missing entirely)<br>
-        3. Add compounding disclaimer (required if citing clinical data)
-      </td>
+      <td>7</td>
+      <td><strong>Sema vs. Tirz</strong></td>
+      <td>+7-10 days</td>
+      <td>Swap HRT/Longevity catalog for Sema vs Tirz comparison table. Add missing EFFECTY100 offer. Add compounding disclaimer.</td>
       <td>1-2 hrs</td>
+    </tr>
+    <tr style="background:#f0fdf4;">
+      <td></td>
+      <td><strong>Total</strong></td>
+      <td></td>
+      <td><strong>7 emails, ~22 changes</strong></td>
+      <td><strong>5-8 hrs</strong></td>
     </tr>
   </tbody>
 </table>
 
-<div class="callout">
-  <strong>3 quick wins to do first (under 20 minutes total):</strong><br>
-  1. Fix Email 4 promo code: EFFECTY5 → EFFECTY100 + fix "Earn 6% Today" CTA (production bug)<br>
-  2. Fix Email 2B preview text (currently broken, showing raw Liquid code in inbox)<br>
-  3. Fix Email 2B promo code: EFFECTY50 → EFFECTY100
+<div class="callout callout-red">
+  <strong>Data flag (before starting copy work).</strong> Journey conversion dropped from 1.38% (Feb 2026) to 0.52% (Mar 2026) on Campaign 99. Content didn't change between those months. Check Customer.io for: (1) prospects re-entering the flow multiple times (suppression rules), (2) deliverability damage from the 93K February send, (3) list hygiene. Copy edits will fix the content, but if the same people are seeing the same flow twice, that's a separate problem.
 </div>
 
 
 <!-- ================================================================ -->
-<!-- SECTION 2: GABRIELA'S TASK LIST -->
-<!-- ================================================================ -->
-
 <span class="section-num">Section 02</span>
 <h2>Gabriela's Task List</h2>
-
-<p>These are the things Gabriela needs to do, find, or confirm before or during the Figma updates. Checking these off first will unblock the copy work.</p>
+<!-- ================================================================ -->
 
 <div class="task-list">
-  <div class="task-list-header">Action Items for Gabriela</div>
+  <div class="task-list-header">Action Items (Complete Before or During Figma Work)</div>
   <div class="task-list-body">
 
     <div class="task-item" style="background:#fef2f2;">
       <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>URGENT: Fix promo codes across all emails.</strong><br>
-        <span class="task-email-tag">E2B</span> Change EFFECTY50 → EFFECTY100<br>
-        <span class="task-email-tag">E4</span> Change EFFECTY5 → EFFECTY100 and fix "Earn 6% Today" CTA<br>
-        <span class="task-email-tag">E5</span> Add EFFECTY100 promo block (currently no offer in this email at all)
+      <div>
+        <strong>URGENT: Fix promo codes.</strong><br>
+        <span class="task-email-tag">E4</span> EFFECTY50 → EFFECTY100 in Robyn's email<br>
+        <span class="task-email-tag">E6</span> EFFECTY5 → EFFECTY100 + fix "Earn 6% Today" CTA<br>
+        <span class="task-email-tag">E7</span> Add EFFECTY100 offer (completely missing from this email)
       </div>
     </div>
 
     <div class="task-item" style="background:#fef2f2;">
       <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>URGENT: Fix Email 2B preview text.</strong> Currently showing raw Liquid merge tag as literal text in inbox preview. Set preview text to: "Just following up on the questionnaire you started. Wanted to make sure you have everything you need."
-        <span class="task-email-tag">E2B</span>
+      <div>
+        <strong>URGENT: Fix Email 4 preview text.</strong> Currently showing raw Liquid merge tag in inbox. Set to: "Just following up on the questionnaire you started. Wanted to make sure you have everything you need."
+        <span class="task-email-tag">E4</span>
       </div>
     </div>
 
     <div class="task-item">
       <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Find 1 real patient testimonial with photo for Email 2A.</strong> Needs to be a verified patient who consented to share their experience. Ideally addresses cost/process anxiety. 2-3 sentences max. Replaces the current Sara F. and Nicolette H. text-only quotes.
-        <span class="task-email-tag">E2A</span>
+      <div>
+        <strong>Find 1 real patient review + photo for Email 3.</strong> Needs consent. Should address cost or process anxiety. 2-3 sentences max. Replaces Sara F. + Nicolette H.
+        <span class="task-email-tag">E3</span>
       </div>
     </div>
 
     <div class="task-item">
       <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Find 3 short patient testimonials (with photos if possible) for Email 3A.</strong> Each should address one specific objection:<br>
-        &bull; Testimonial 1: Side effects were manageable<br>
-        &bull; Testimonial 2: Pricing was transparent, no surprises<br>
-        &bull; Testimonial 3: Process was fast (questionnaire to medication in X days)<br>
-        2-3 sentences each, max. Real names required (FTC 2023 rules).
-        <span class="task-email-tag">E3A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Get Dr. Pagano's headshot.</strong> Circular crop, professional, at least 160x160px for retina. Check if one already exists on effecty.com. Needed for Email 2A provider block.
-        <span class="task-email-tag">E2A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Confirm current Trustpilot rating + review count.</strong> For Email 3A headline. Need exact star rating (e.g., 4.8/5) and approximate review count (e.g., 2,000+).
-        <span class="task-email-tag">E3A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Confirm lowest monthly plan price.</strong> For Semaglutide and Tirzepatide separately. Needed for Email 2A pricing line and Email 5 comparison table. Check effecty.com.
-        <span class="task-email-tag">E2A</span> <span class="task-email-tag">E5</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Confirm the "9 out of 10" clinical stat source.</strong> Is it Effecty's own patient cohort data or clinical trial data? This determines which disclaimer we need. Check with the medical/marketing team.
-        <span class="task-email-tag">E1</span> <span class="task-email-tag">E2A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Find 1 before/after patient photo pair (optional but high impact).</strong> For Email 3A social proof section. Patient must have signed a photo release. FTC requires: "Results may vary. Individual results depend on adherence to treatment plan."
-        <span class="task-email-tag">E3A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Fix Figma frame name typo.</strong> Email 3A frame is named "Existing Customerss" (double 's'). Rename to "Existing Customers."
-        <span class="task-email-tag">E3A</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Remove Email 3B from the flow.</strong> It's a near-duplicate of Email 2A with a different dollar amount. Delete or archive the frame.
-        <span class="task-email-tag">E3B</span>
-      </div>
-    </div>
-
-    <div class="task-item">
-      <div class="task-checkbox"></div>
-      <div class="task-label">
-        <strong>Clean up Email 5's inner Figma frame.</strong> Still labeled "Valentine's Day Angle" from a repurposed template. Rename to something like "GT | WL Cart Abandonment Email 5: Sema vs Tirz Comparison."
+      <div>
+        <strong>Find 3 short patient reviews + photos for Email 5.</strong> Each addresses one objection:<br>
+        &bull; Review 1: Side effects were manageable<br>
+        &bull; Review 2: Pricing was transparent, no surprises<br>
+        &bull; Review 3: Fast process (questionnaire → medication in days)
         <span class="task-email-tag">E5</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Get Dr. Pagano headshot.</strong> Circular crop, 160x160px min. Check effecty.com or request from client. Needed for E2 and E3.
+        <span class="task-email-tag">E2</span> <span class="task-email-tag">E3</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Confirm Trustpilot rating + review count.</strong> Exact star rating and approximate count for E5 headline.
+        <span class="task-email-tag">E5</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Confirm lowest monthly plan prices.</strong> Semaglutide and Tirzepatide separately. For E3 pricing line and E7 comparison table.
+        <span class="task-email-tag">E3</span> <span class="task-email-tag">E7</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Confirm "9 out of 10" stat source.</strong> Effecty cohort data or clinical trials? Determines which disclaimer to use.
+        <span class="task-email-tag">E1</span> <span class="task-email-tag">E2</span> <span class="task-email-tag">E3</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Find 1 before/after photo pair (optional, high impact).</strong> Patient with signed release. For E5 social proof.
+        <span class="task-email-tag">E5</span>
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Remove old Email 3B from flow.</strong> It's a duplicate of 2A with $125 instead of $100. Delete or archive.
+      </div>
+    </div>
+
+    <div class="task-item">
+      <div class="task-checkbox"></div>
+      <div>
+        <strong>Fix Figma frame names.</strong> Email 3A: "Customerss" → "Customers" (typo). Email 5: "Valentine's Day Angle" → "Sema vs Tirz Comparison."
+        <span class="task-email-tag">E5</span> <span class="task-email-tag">E3A</span>
       </div>
     </div>
 
@@ -447,330 +296,238 @@
 
 
 <!-- ================================================================ -->
-<!-- SECTION 3: DETAILED CHANGES PER EMAIL -->
-<!-- ================================================================ -->
-
 <span class="section-num">Section 03</span>
-<h2>Detailed Changes by Email</h2>
+<h2>Production Copy: All 7 Emails</h2>
+<!-- ================================================================ -->
 
 
 <!-- ================================================================ -->
 <!-- EMAIL 1 -->
 <!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 1: "Your GLP-1 Plan Starts Here" (1 hour)</h3>
-    <span class="verdict verdict-few">3 Changes</span>
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 1: Recovery Reminder</h3>
+    <span class="tag tag-edit">Surgical Edits</span>
   </div>
-  <div class="email-card-body">
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+1 hour post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 3,000px</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>You left something behind, {{customer.firstName|default:''}}</td><td>42</td></tr>
+        <tr><td>B</td><td>You're closer than you think</td><td>28</td></tr>
+        <tr><td>C</td><td>Still thinking it over? $100 off inside</td><td>39</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Your questionnaire is saved. A provider is ready to review your plan. (62 chars)</span></div>
 
-    <div class="keep-block">
-      <strong>KEEP:</strong> Hero image, product vial photos, overall layout, "Feeling unsure about your eligibility?" section, footer icons (Free Expedited Shipping, Endorsed Doctor Support, Board Enrolling on Trustpilot), promo code display.
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p class="hl">Your Personalized Plan Is Waiting</p>
+
+      <p>[KEEP: existing hero image + product vial photos]</p>
+
+      <p class="badge">9 out of 10 Effecty patients experienced weight loss</p>
+
+      <p>You got pretty far. Your questionnaire is saved, and it takes less than 2 minutes to finish.</p>
+
+      <p>Once you do, a board-certified provider reviews your responses within 24 hours. No appointment needed.</p>
+
+      <div class="promo">
+        <span class="code-label">Your exclusive code</span>
+        <span class="code">EFFECTY100</span>
+        <span style="font-size:0.82rem;color:#666;margin-top:4px;display:block;">$100 off your first treatment</span>
+      </div>
+
+      <p style="text-align:center;"><span class="cta">Finish my questionnaire</span></p>
+
+      <p style="font-size:0.82rem;color:#888;">Your card is not charged until a provider writes your prescription. If you're not a candidate, you pay nothing.</p>
+
+      <p>[KEEP: "Feeling unsure about your eligibility?" section]</p>
+      <p>[KEEP: Footer icons + footer]</p>
+
+      <p style="font-size:0.75rem;color:#aaa;">Valid for new patients. One use per customer. Cannot be combined with other offers.</p>
     </div>
 
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Swap CTA text (2 buttons)</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>"Complete The Quiz →"<br>"Get Started"</div>
-            <div class="after-block"><span class="ba-label">New</span>"Finish my questionnaire →"<br>"See my treatment options"</div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> First-person payoff language. "Quiz" minimizes a medical questionnaire. "Get Started" says nothing about what they get.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Add clinical stat badge below product vials</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> small sage green (#ced4bc) badge below the product vials:<br><br>
-            <span style="background:#ced4bc;padding:6px 14px;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:0.85rem;">9 out of 10 Effecty patients experienced weight loss</span>
-          </div>
-          <div class="why-block"><strong>Why:</strong> Website leads with this stat. Zero clinical proof in any current email. One badge, 5 minutes in Figma.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Tighten the "Take the final step" body copy</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>"You've taken the first step in your weight loss journey, and we're here to help you cross the finish line successfully.<br><br>Our safe and professional process is designed to provide you with the best care and guidance tailored to your health needs."</div>
-            <div class="after-block"><span class="ba-label">New</span>"You got pretty far. Your questionnaire is saved, and it takes less than 2 minutes to finish.<br><br>Once you do, a board-certified provider reviews your responses within 24 hours. No appointment needed."</div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> Current copy is generic ("safe and professional process"). New version answers what actually happens next + adds concrete timeframe (24 hours).</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ================================================================ -->
-<!-- EMAIL 2A -->
-<!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 2A: "Take The Final Step" (24 hours)</h3>
-    <span class="verdict verdict-significant">5 Changes</span>
-  </div>
-  <div class="email-card-body">
-
-    <div class="keep-block">
-      <strong>KEEP:</strong> effecty. header, hero image (woman running), overall email structure (hero → body → testimonials → footer), "Feeling unsure about your eligibility?" section, footer.
-    </div>
-
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Replace 4-step brand values with 3-step patient journey from website</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Kill This</span>
-              "The Right Step Towards a Healthier You"<br><br>
-              &bull; Innovation & Expertise<br>
-              &bull; Transparency<br>
-              &bull; Accessibility<br>
-              &bull; Safety & Efficacy<br><br>
-              <em>(4 paragraphs of brand values)</em>
-            </div>
-            <div class="after-block">
-              <span class="ba-label">Replace With</span>
-              <strong>"How It Works"</strong><br><br>
-              <strong>1. Complete your questionnaire</strong><br>
-              Answer a few questions about your health. Under 2 minutes. No obligation.<br><br>
-              <strong>2. A provider reviews your plan</strong><br>
-              Dr. Pagano and his team evaluate your responses within 24 hours.<br><br>
-              <strong>3. Medication ships to your door</strong><br>
-              Free expedited shipping from licensed U.S. pharmacies.
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> This is the #1 change in the entire flow. Nobody cares about corporate values when deciding to spend money on a medical product. They want to know what happens NEXT. The website already has this 3-step journey. This single swap directly addresses the CTR collapse (2.80% → 1.13%).</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Shorten testimonials + add a patient photo</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Current</span>
-              Sara F. — 8 lines of text, no photo<br>
-              Nicolette H. — 6 lines, no photo<br><br>
-              <em>(Walls of text. Zero visual proof.)</em>
-            </div>
-            <div class="after-block">
-              <span class="ba-label">New</span>
-              <strong>One testimonial, max 3 lines, with patient photo:</strong><br><br>
-              [Patient Photo]<br>
-              &#9733;&#9733;&#9733;&#9733;&#9733;<br>
-              "I almost didn't finish the questionnaire. I figured there'd be hidden costs or a sales call. There weren't. My provider reviewed everything and my medication arrived in 4 days. Down 18 lbs in 3 months."<br>
-              — [Real Patient Name]
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> One short, specific testimonial with a real photo outperforms two long anonymous quotes. The testimonial addresses cost/process anxiety specifically. <strong>Gabriela: need a real patient review + photo for this.</strong></div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Add pricing transparency line</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> above the promo code section:<br><br>
-            "Plans start at <strong>$XXX/month</strong>. The price you see is the price you pay. No hidden fees."
-          </div>
-          <div class="why-block"><strong>Why:</strong> Zero pricing in any email. Every competitor shows pricing. Prospect abandoned a medical questionnaire and is wondering what this costs. <strong>Gabriela: confirm lowest Sema plan price with the team.</strong></div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">4</span><strong>Add Dr. Pagano small provider block near CTA</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> above or below the main CTA:<br><br>
-            [Dr. Pagano circular headshot, 64px] <strong>Dr. Nunzio Pagano, MD</strong><br>
-            Board Certified &bull; Reviews every patient's plan personally
-          </div>
-          <div class="why-block"><strong>Why:</strong> Website features Dr. Pagano. Zero provider imagery in any email. A doctor's face answers "Is this legitimate?" instantly. <strong>Gabriela: get the headshot from effecty.com or request from client.</strong></div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">5</span><strong>Kill 3 of the 4 CTAs</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>"Get Started Today →"<br>"Get Started Now"<br>"Your Health Guide"<br>"Experience The Effecty Difference"</div>
-            <div class="after-block"><span class="ba-label">New</span>One CTA only: <strong>"See my treatment options"</strong><br><br>Remove all others.</div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> 4 CTA texts = decision fatigue. One CTA. First-person payoff language.</div>
-        </div>
-      </div>
+    <div class="change-note">
+      <strong>What changed:</strong> (1) CTA: "Complete The Quiz" → "Finish my questionnaire" and "Get Started" → "See my treatment options." (2) Added sage green clinical stat badge below product vials. (3) Replaced generic "safe and professional process" body copy with concrete next steps + 24-hour timeframe.
     </div>
   </div>
 </div>
 
 
 <!-- ================================================================ -->
-<!-- EMAIL 2B -->
+<!-- EMAIL 2 -->
 <!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 2B: Robyn Plain Text (24 hours, A/B)</h3>
-    <span class="verdict verdict-few">3 Changes</span>
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 2: "What to Expect" (Micro-Email)</h3>
+    <span class="tag tag-new">New Email</span>
   </div>
-  <div class="email-card-body">
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+4-6 hours post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 2,000px (shortest email in flow)</span></div>
+    <div class="meta-row"><span class="meta-label">Replaces</span><span>Old Email 3B ($125 duplicate). Killed that, added this.</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Here's exactly what happens next</td><td>33</td></tr>
+        <tr><td>B</td><td>3 things to know before you finish</td><td>35</td></tr>
+        <tr><td>C</td><td>{{customer.firstName|default:'Hey'}}, quick note about your visit</td><td>47</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>No charge unless you're approved. Here's exactly how it works. (62 chars)</span></div>
 
-    <div class="keep-block">
-      <strong>KEEP:</strong> Plain text format, personal voice from Robyn, sender (robyn@effecty.com), conversational tone. Do NOT add design elements.
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p class="hl">Here's What Happens After You Hit Submit</p>
+
+      <div class="provider">
+        <div class="provider-avatar">Dr. Pagano<br>Photo</div>
+        <div>
+          <div class="provider-name">Dr. Nunzio Pagano, MD</div>
+          <div class="provider-cred">Board Certified &bull; Reviews every patient questionnaire personally</div>
+        </div>
+      </div>
+
+      <p>Most people pause at the questionnaire for one of three reasons. Here are the honest answers.</p>
+
+      <div class="step">
+        <div class="step-n">1</div>
+        <div>
+          <strong>"What happens after I submit?"</strong><br>
+          Dr. Pagano and his team review your responses within 24 hours. No appointment needed. If you're a good candidate, they write a personalized prescription and your medication ships free.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">2</div>
+        <div>
+          <strong>"How much does this actually cost?"</strong><br>
+          Plans start at $XXX/month. No hidden fees. The price you see is the price you pay. And right now, code EFFECTY100 saves you another $100.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-n">3</div>
+        <div>
+          <strong>"What if I'm not eligible?"</strong><br>
+          Your card is only charged after a provider approves your treatment. If they determine it's not right for you, you pay nothing. Zero financial risk to complete the questionnaire.
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:20px;"><span class="cta">Complete my questionnaire</span></p>
+
+      <p style="font-size:0.85rem;color:#666;text-align:center;">Takes less than 2 minutes.</p>
     </div>
 
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Fix preview text (BROKEN)</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>Empty / pulls raw Liquid merge tag in inbox preview</div>
-            <div class="after-block"><span class="ba-label">Set To</span>"Just following up on the questionnaire you started. Wanted to make sure you have everything you need."</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Update promo code</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>"$50 off code: EFFECTY50"</div>
-            <div class="after-block"><span class="ba-label">New</span>"code EFFECTY100 to save $100 on your first treatment"</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Cut FAQ from 7 to 3 questions</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Remove These 4</span>
-              &bull; "What pharmacy do you use?"<br>
-              &bull; "How long does the process take?"<br>
-              &bull; "How much does shipping cost?"<br>
-              &bull; "Do I get access to medical support?"
-            </div>
-            <div class="after-block">
-              <span class="ba-label">Keep These 3</span>
-              <strong>"How does the process work?"</strong> (tighten to 3 lines)<br><br>
-              <strong>"What does it cost?"</strong> (rename from current; add quarterly saves most)<br><br>
-              <strong>"What if I'm not eligible?"</strong> (ADD: "Your card isn't charged until a provider writes your prescription. Not a candidate = you pay nothing.")
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> 7 FAQ questions = wall of text nobody finishes. Keep the 3 that match the top abandonment reasons.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ================================================================ -->
-<!-- EMAIL 3A -->
-<!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 3A: "We'd Love To Know!" (48-72 hours)</h3>
-    <span class="verdict verdict-significant">4 Changes</span>
-  </div>
-  <div class="email-card-body">
-
-    <div class="keep-block">
-      <strong>KEEP:</strong> effecty. header, hero image (3 women), footer. Visual structure is fine. Content needs new purpose.
+    <div class="gab-task">
+      <strong>Gabriela:</strong> This is a new email. Build from scratch in Figma. Keep it minimal: white background, no hero image, no decorative sections. Dr. Pagano headshot (circular, 80px) at top. 3 numbered steps. Single CTA. Under 2,000px. The visual message is: "we're not selling, we're explaining."
     </div>
 
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Change headline + purpose: feedback request → social proof</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Current</span>
-              <strong>"We'd Love To Know!"</strong><br>
-              "Please let us know what is stopping you by heading over to our contact us page"
-            </div>
-            <div class="after-block">
-              <span class="ba-label">New</span>
-              <strong>"Real Patients. Real Results."</strong><br>
-              "Every one of these patients had the same hesitation you might be feeling right now. Here's what happened when they decided to start."
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> By day 3 they're comparing providers. They need proof, not a feedback form that sends them to a contact page instead of the questionnaire.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Kill entire "Looking For A Different Treatment?" product catalog</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Remove</span>
-              &bull; Compounded Liraglutide card + 2 CTAs<br>
-              &bull; Metformin card + 2 CTAs<br>
-              &bull; Ozempic card + 2 CTAs<br>
-              &bull; Mounjaro card + 2 CTAs<br><br>
-              <em>(4 products, 8 CTAs, flowchart layout)</em>
-            </div>
-            <div class="after-block">
-              <span class="ba-label">Replace With</span>
-              <strong>3 short testimonials (2-3 sentences each):</strong><br><br>
-              1. <strong>Side effects:</strong> "The first week was rough. Some nausea. But by week 3 it leveled out. Down 22 lbs in 4 months."<br><br>
-              2. <strong>Cost/process:</strong> "No surprise charges. My quarterly plan saves me more per month. Provider explained the whole schedule."<br><br>
-              3. <strong>Speed:</strong> "Questionnaire on Tuesday. Provider reviewed by Wednesday. Medication by Friday."<br><br>
-              <em>Add patient photos + star ratings above each.</em>
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> Weight loss abandoner ≠ Liraglutide/Metformin browser. 8 competing CTAs pull them everywhere except back to the questionnaire. <strong>Gabriela: need 3 real patient reviews + photos for this. Each addressing one objection (side effects, cost, speed).</strong></div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Add Trustpilot aggregate proof at top</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> below the new headline:<br><br>
-            &#9733;&#9733;&#9733;&#9733;&#9733; <strong>Rated 4.8/5</strong> by X,000+ patients on Trustpilot<br><br>
-            <strong>Gabriela: check Trustpilot for current exact rating + review count.</strong>
-          </div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">4</span><strong>Replace 9 buttons with 1 CTA</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span>"Tell Us More →" (contact page)<br>+ 8 product-level "Get Started →" / "Learn More →"</div>
-            <div class="after-block"><span class="ba-label">New</span>One CTA: <strong>"See my treatment options"</strong><br>Below it: "Code EFFECTY100 is still active. Save $100."</div>
-          </div>
-        </div>
-      </div>
+    <div class="change-note">
+      <strong>Why this exists:</strong> 365-day data shows the biggest revenue drop-off is between Email 1 and every subsequent email. The CTR collapses because nobody answers the three questions that actually stop people from finishing: process, cost, eligibility. Found and Calibrate report 15-20% higher completion rates after adding this type of email.
     </div>
   </div>
 </div>
 
 
 <!-- ================================================================ -->
-<!-- EMAIL 3B -->
+<!-- EMAIL 3 -->
 <!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 3B: $125 Off Duplicate</h3>
-    <span class="verdict verdict-moderate">Kill</span>
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 3: Patient Journey + Trust</h3>
+    <span class="tag tag-redo">Redo</span>
   </div>
-  <div class="email-card-body">
-    <div class="callout callout-gold">
-      <strong>Remove from flow.</strong> This email is nearly identical to Email 2A: same hero image, same "Innovation / Transparency / Accessibility / Safety" block, same Sara F. and Nicolette H. testimonials, just with $125 instead of $100. Sending the same email twice wastes a touchpoint and confuses the prospect with different dollar amounts. If the $125 offer is real, use it in Email 4 (urgency) instead of duplicating Email 2A's content.
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+24 hours post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Replaces</span><span>Old Email 2A ("Take The Final Step" with Innovation/Transparency/Accessibility/Safety)</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 3,500px</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>This is what your first week looks like</td><td>41</td></tr>
+        <tr><td>B</td><td>No surprises. Here's how this works</td><td>36</td></tr>
+        <tr><td>C</td><td>{{customer.firstName|default:'Hi'}}, your provider is ready</td><td>42</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Board-certified providers. Licensed pharmacies. Plans from $XXX/mo. No surprises. (82 chars)</span></div>
+
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p>[KEEP: effecty. header, hero image (woman running)]</p>
+
+      <p class="hl">This Is What Your First Week Actually Looks Like</p>
+
+      <p>You probably have a few questions. That's smart. You're making a decision about your health and you want to know exactly what you're getting into.</p>
+
+      <p>Here's the honest picture.</p>
+
+      <p class="sub-hl">Three steps. That's the whole process.</p>
+
+      <div class="step">
+        <div class="step-n">1</div>
+        <div><strong>Complete your questionnaire.</strong><br>Answer a few questions about your health history and goals. Under 2 minutes. No obligation.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div><strong>A real provider reviews your plan.</strong><br>Not an algorithm. Dr. Pagano and his team evaluate your responses within 24 hours and decide whether treatment is right for you. If it's not, you pay nothing.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div><strong>Your medication ships free to your door.</strong><br>Compounded GLP-1 medication from licensed U.S. pharmacies. Free expedited shipping. Most patients start treatment within a week.</div>
+      </div>
+
+      <p class="badge">9 out of 10 Effecty patients experienced weight loss</p>
+
+      <p class="sub-hl">What it costs. No guessing.</p>
+
+      <p>Plans start at <strong>$XXX/month</strong>. That's the real number. No hidden fees, no surprise charges. Save an additional $100 with your code below.</p>
+
+      <div class="promo">
+        <span class="code-label">Your exclusive code</span>
+        <span class="code">EFFECTY100</span>
+        <span style="font-size:0.82rem;color:#666;margin-top:4px;display:block;">$100 off your first treatment</span>
+      </div>
+
+      <p style="text-align:center;"><span class="cta">See my treatment options</span></p>
+
+      <div class="provider">
+        <div class="provider-avatar">Dr. Pagano<br>Photo</div>
+        <div>
+          <div class="provider-name">Dr. Nunzio Pagano, MD</div>
+          <div class="provider-cred">Board Certified &bull; "Every patient gets a personalized plan. That's non-negotiable."</div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>[PATIENT PHOTO]</p>
+        <p>"I almost didn't finish the questionnaire because I figured there'd be hidden costs or a sales call. There weren't. My provider reviewed everything, explained the options, and my medication showed up in 4 days. Down 18 lbs in 3 months."</p>
+        <div class="tname">— [Real Patient Name], verified Effecty patient</div>
+      </div>
+
+      <p>[KEEP: "Feeling unsure about your eligibility?" section + footer]</p>
+
+      <p style="font-size:0.75rem;color:#aaa;">Results may vary. Individual results depend on adherence to treatment plan. Effecty provides compounded GLP-1 medication formulated by licensed U.S. pharmacies. Valid for new patients. One use per customer.</p>
+    </div>
+
+    <div class="gab-task">
+      <strong>Gabriela:</strong> (1) Replace the Innovation/Transparency/Accessibility/Safety section with the 3-step journey above. Same visual space, different content. (2) Replace Sara F. + Nicolette H. with 1 short testimonial + patient photo. <strong>Need real review from client.</strong> (3) Add pricing line above promo code. <strong>Need lowest plan price from client.</strong> (4) Add Dr. Pagano block. <strong>Need headshot.</strong> (5) Kill "Get Started Now," "Your Health Guide," and "Experience The Effecty Difference" buttons. Keep one CTA: "See my treatment options."
     </div>
   </div>
 </div>
@@ -779,85 +536,58 @@
 <!-- ================================================================ -->
 <!-- EMAIL 4 -->
 <!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 4: "Last Chance!" (5-7 days)</h3>
-    <span class="verdict verdict-significant">5 Changes</span>
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 4: Robyn Plain Text (A/B with Email 3)</h3>
+    <span class="tag tag-keep">Keep + Fix</span>
   </div>
-  <div class="email-card-body">
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+24 hours (A/B split with Email 3)</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Robyn from Effecty &lt;robyn@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Format</span><span>Plain text. Do NOT add design elements.</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Re: your questionnaire</td><td>22</td></tr>
+        <tr><td>B</td><td>Quick question, {{customer.firstName|default:''}}</td><td>35</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Just following up on the questionnaire you started. Wanted to make sure you have everything you need. (90 chars)</span></div>
 
-    <div class="keep-block">
-      <strong>KEEP:</strong> Position in sequence (5-7 days), urgency concept, product vial imagery, footer.
+    <h4>Copy</h4>
+    <div class="copy-block" style="font-family:'Courier New',monospace;background:#fff;border:1px solid #ddd;font-size:0.9rem;">
+      <p>Hey {{customer.firstName|default:'there'}},</p>
+
+      <p>It's Robyn from Effecty. I noticed you started a questionnaire and wanted to check in personally.</p>
+
+      <p>If you've already completed it and started treatment, ignore this! (And congrats.)</p>
+
+      <p>If you're still thinking it over, I totally get it. Here are the three things most people want to know:</p>
+
+      <p><strong>What happens after I finish?</strong><br>
+      A board-certified provider (Dr. Pagano and his team) reviews your responses within 24 hours. No video call, no waiting room. If approved, your medication ships free.</p>
+
+      <p><strong>What does it cost?</strong><br>
+      Plans start at $XXX/month. We have monthly, quarterly, and 6-month options. Quarterly saves you the most. You can also use code <strong>EFFECTY100</strong> for $100 off your first treatment.</p>
+
+      <p><strong>What if I'm not eligible?</strong><br>
+      You won't be charged. Your card is only billed after a provider writes your prescription. Not a candidate = you pay nothing.</p>
+
+      <p>If you have other questions, just reply here. I read every response personally.</p>
+
+      <p>Warmly,<br>
+      Robyn<br>
+      Co-Founder, Effecty</p>
+
+      <p>>> <a href="#" style="color:#2563eb;">Complete Your Questionnaire & Save $100</a> <<</p>
     </div>
 
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Fix wrong promo code (PRODUCTION BUG)</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current (Wrong)</span>Code: <strong>EFFECTY5</strong><br>CTA: "Earn 6% Today →"</div>
-            <div class="after-block"><span class="ba-label">Fix To</span>Code: <strong>EFFECTY100</strong><br>CTA: "Finish my questionnaire"</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Change headline</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Current</span><strong>"Last Chance!"</strong></div>
-            <div class="after-block"><span class="ba-label">New</span><strong>"We've Been Holding Your Spot"</strong></div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> "Last Chance!" is generic. "We've been holding your spot" ties urgency to their journey (saved responses).</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Kill "It's Time to Invest in Your Health" values section</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Remove</span>
-              &bull; "More than just Telemedicine"<br>
-              &bull; "We've Been There and Done That"<br>
-              &bull; "The Support You Need"<br>
-              &bull; "Clarity in Cost, Peace in Transparency"
-            </div>
-            <div class="after-block">
-              <span class="ba-label">Replace With</span>
-              Simple bullet list:<br><br>
-              &bull; Board-certified provider ready to review within 24 hours<br>
-              &bull; Free expedited shipping<br>
-              &bull; $100 off with EFFECTY100<br>
-              &bull; Plans from $XXX/month, no hidden fees
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> 3rd time the prospect sees brand values copy in this flow. Urgency = directness. Bullet list of concrete benefits beats more corporate messaging.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">4</span><strong>Kill "Looking For A Different Treatment?" cross-sell section</strong></div>
-        <div class="change-item-body">
-          <p>Remove the entire HRT/Longevity product catalog. It appears for the 3rd time in this flow. Let the urgency CTA breathe.</p>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">5</span><strong>Kill "Something holding you back?" section</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block"><span class="ba-label">Remove</span>"Something holding you back?"<br>"Tell Us More →" (sends to contact page)</div>
-            <div class="after-block"><span class="ba-label">Replace With</span>One line below CTA:<br>"No obligation. No charge unless your provider approves your treatment."</div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> Sends them to contact page instead of questionnaire. In an urgency email, every CTA should point to one place: the questionnaire.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="callout callout-red">
-      <strong>Net result:</strong> ~5,750px email with wrong code, brand values, a cross-sell catalog, and a contact page redirect → ~2,500px with correct code, clear headline, bullet list, one CTA. Same frame. Just delete sections and swap copy.
+    <div class="gab-task">
+      <strong>Gabriela:</strong> (1) Set preview text (currently broken/empty). (2) Change EFFECTY50 → EFFECTY100. (3) Delete the 4 FAQ questions listed below and keep only the 3 above:<br>
+      DELETE: "What pharmacy do you use?" / "How long does the process take?" / "How much does shipping cost?" / "Do I get access to medical support?"
     </div>
   </div>
 </div>
@@ -866,122 +596,241 @@
 <!-- ================================================================ -->
 <!-- EMAIL 5 -->
 <!-- ================================================================ -->
-
-<div class="email-card">
-  <div class="email-card-header">
-    <h3>Email 5: "Looking Beyond Weight Loss?" (7-10 days)</h3>
-    <span class="verdict verdict-significant">3 Changes</span>
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 5: Social Proof</h3>
+    <span class="tag tag-redo">Redo</span>
   </div>
-  <div class="email-card-body">
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+48-72 hours post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Replaces</span><span>Old Email 3A ("We'd Love To Know!" feedback form + Liraglutide/Metformin/Ozempic/Mounjaro catalog)</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 3,500px</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>What 90 days actually looks like</td><td>33</td></tr>
+        <tr><td>B</td><td>"I almost didn't start." (real patient)</td><td>40</td></tr>
+        <tr><td>C</td><td>Rated 4.8 stars by thousands of patients</td><td>42</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Real results from real patients. Plus, your $100 code is still active. (70 chars)</span></div>
 
-    <div class="keep-block">
-      <strong>KEEP:</strong> effecty. header, product vial photography style, 2-column layout structure, footer.
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p>[KEEP: effecty. header, hero image (3 women)]</p>
+
+      <p class="hl">Real Patients. Real Results.</p>
+
+      <p style="text-align:center;font-size:1rem;margin-bottom:4px;"><strong>Rated 4.8/5</strong> by X,000+ patients on Trustpilot</p>
+      <p style="text-align:center;font-size:0.85rem;color:#888;margin-bottom:20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+
+      <p>Every one of these patients had the same hesitation you might be feeling right now. Here's what happened when they decided to start.</p>
+
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-size:0.85rem;color:#888;margin-bottom:6px;">[BEFORE / AFTER PHOTO PAIR — optional, high impact]</p>
+        <p>"The first week was rough. Some nausea, less appetite than I expected. But by week 3 it leveled out. I'm down 22 lbs in 4 months and my doctor said my blood work improved across the board."</p>
+        <div class="tname">— [Real Patient Name] &bull; <em>Addresses: side effect anxiety</em></div>
+      </div>
+
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>[PATIENT PHOTO]</p>
+        <p>"No surprise charges. My quarterly plan saves me more per month than the monthly option, and my provider actually took the time to explain the titration schedule."</p>
+        <div class="tname">— [Real Patient Name] &bull; <em>Addresses: cost uncertainty</em></div>
+      </div>
+
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>[PATIENT PHOTO]</p>
+        <p>"Completed the questionnaire on a Tuesday night. A provider reviewed my plan by Wednesday afternoon. I had my medication by Friday."</p>
+        <div class="tname">— [Real Patient Name] &bull; <em>Addresses: speed vs. traditional healthcare</em></div>
+      </div>
+
+      <p>Your questionnaire is still saved. It takes less than 2 minutes to complete.</p>
+
+      <p style="text-align:center;"><span class="cta">See my treatment options</span></p>
+
+      <p style="font-size:0.85rem;color:#666;text-align:center;">Code <strong>EFFECTY100</strong> is still active. Save $100 on your first treatment.</p>
+
+      <p style="font-size:0.75rem;color:#aaa;">Results may vary. Individual results depend on adherence to treatment plan. Effecty provides compounded GLP-1 medication formulated by licensed U.S. pharmacies. Valid for new patients. One use per customer.</p>
     </div>
 
-    <div class="callout callout-red">
-      <strong>Two critical problems with this email:</strong><br>
-      1. It cross-sells HRT (Estradiol patches/gel/tablets) and Longevity (NAD+, MK-1903, Sermorelin) to someone who abandoned a WEIGHT LOSS questionnaire. Complete context mismatch.<br>
-      2. <strong>There is no offer anywhere in this email.</strong> No EFFECTY100, no discount, nothing. Every other email in the flow has the promo code. This one has zero incentive to act.<br><br>
-      The Figma inner frame is still labeled "Valentine's Day Angle" from a repurposed template.
-    </div>
-
-    <div class="change-list">
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">1</span><strong>Full content swap: HRT/Longevity → Sema vs. Tirz comparison</strong></div>
-        <div class="change-item-body">
-          <div class="before-after">
-            <div class="before-block">
-              <span class="ba-label">Current</span>
-              <strong>"Looking Beyond Weight Loss?"</strong><br>
-              "What's Your Main Health Goal?"<br><br>
-              Menopause Relief column:<br>
-              &bull; Estradiol patches<br>
-              &bull; Estradiol gel<br>
-              &bull; Estradiol tablets<br><br>
-              Longevity column:<br>
-              &bull; NAD+ Injectables<br>
-              &bull; MK-1903<br>
-              &bull; Sermorelin<br><br>
-              <em>(8+ CTAs, complex flowchart)</em>
-            </div>
-            <div class="after-block">
-              <span class="ba-label">New</span>
-              <strong>"Two Options. Here's How to Choose."</strong><br><br>
-              "You've probably seen two names: Semaglutide and Tirzepatide. Both are GLP-1 medications. Here's the honest comparison."<br><br>
-              <strong>Same 2-column layout, new content:</strong><br><br>
-              Left: <strong>Semaglutide</strong><br>
-              &bull; GLP-1 receptors<br>
-              &bull; ~15% body weight*<br>
-              &bull; Weekly injection<br>
-              &bull; Longer track record<br>
-              &bull; From $XXX/mo<br><br>
-              Right: <strong>Tirzepatide</strong><br>
-              &bull; GLP-1 + GIP dual-action<br>
-              &bull; ~20-22% body weight*<br>
-              &bull; Weekly injection<br>
-              &bull; Available with B12<br>
-              &bull; From $XXX/mo<br><br>
-              "Not sure which? That's what the questionnaire is for. Your provider will recommend the right one."<br><br>
-              CTA: <strong>"Find my personalized plan"</strong>
-            </div>
-          </div>
-          <div class="why-block"><strong>Why:</strong> The prospect at day 7-10 who hasn't converted isn't deciding IF GLP-1. They may be deciding WHICH GLP-1. Help them choose. Uses the same 2-column layout already in the email. Just swap the content.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">2</span><strong>Add the EFFECTY100 offer (currently MISSING)</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> promo code block above CTA:<br><br>
-            "Both options are <strong>$100 off</strong> with code <strong>EFFECTY100</strong>."<br><br>
-            Plus the standard promo code visual block (dashed border, monospace code).
-          </div>
-          <div class="why-block"><strong>Why:</strong> This is the only email in the entire flow with zero offer. Every other email has EFFECTY100. Dropping the incentive on the last touchpoint makes no sense.</div>
-        </div>
-      </div>
-
-      <div class="change-item">
-        <div class="change-item-header"><span class="change-num">3</span><strong>Add compounding disclaimer</strong></div>
-        <div class="change-item-body">
-          <div class="add-block">
-            <strong>ADD</strong> in small print below comparison:<br><br>
-            <span style="font-size:0.82rem;color:#999;">*Based on STEP trials (semaglutide) and SURMOUNT trials (tirzepatide). These results are from branded medications. Individual results with compounded formulations may vary. Effecty provides compounded GLP-1 medication formulated by licensed U.S. pharmacies.</span>
-          </div>
-          <div class="why-block"><strong>Why:</strong> Required if citing clinical trial percentages. FDA has sent 58 warning letters to telehealth companies for compounding claims in the last 6 months.</div>
-        </div>
-      </div>
+    <div class="gab-task">
+      <strong>Gabriela:</strong> (1) Change headline: "We'd Love To Know!" → "Real Patients. Real Results." (2) Delete entire "Looking For A Different Treatment?" product catalog (Liraglutide, Metformin, Ozempic, Mounjaro + all 8 CTAs). (3) Add Trustpilot rating line. <strong>Need exact rating + count.</strong> (4) Add 3 testimonials with photos. <strong>Need 3 real patient reviews from client.</strong> Placeholder copy above shows the structure and which objection each should address. (5) Replace "Tell Us More →" + all product CTAs with one CTA: "See my treatment options." (6) Fix frame name typo: "Customerss" → "Customers."
     </div>
   </div>
 </div>
 
 
 <!-- ================================================================ -->
-<!-- TOTALS -->
+<!-- EMAIL 6 -->
 <!-- ================================================================ -->
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 6: Urgency</h3>
+    <span class="tag tag-edit">Surgical Edits</span>
+  </div>
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+5-7 days post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Replaces</span><span>Old Email 4 ("Last Chance!" with EFFECTY5, "Earn 6% Today," brand values, HRT cross-sell, contact redirect)</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 2,500px (shortest branded email in flow)</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Your saved responses expire soon</td><td>33</td></tr>
+        <tr><td>B</td><td>{{customer.firstName|default:''}}, we're still holding your spot</td><td>44</td></tr>
+        <tr><td>C</td><td>Before your $100 code expires</td><td>30</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Your questionnaire responses and $100 code are still active. Finish in 2 minutes. (82 chars)</span></div>
+
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p>[KEEP: effecty. header, product vial imagery]</p>
+
+      <p class="hl">We've Been Holding Your Spot</p>
+
+      <p>{{customer.firstName|default:'Hi there'}}, it's been about a week since you started your questionnaire. Your responses are still saved, but they won't be forever.</p>
+
+      <p>Here's what's still waiting for you:</p>
+
+      <ul>
+        <li>A board-certified provider ready to review your plan within 24 hours</li>
+        <li>Free expedited shipping on your medication</li>
+        <li><strong>$100 off</strong> your first treatment with code EFFECTY100</li>
+        <li>Plans from $XXX/month with no hidden fees</li>
+      </ul>
+
+      <p>The questionnaire takes less than 2 minutes. And if your provider decides treatment isn't right for you, your card is never charged.</p>
+
+      <div class="promo">
+        <span class="code-label">Still active</span>
+        <span class="code">EFFECTY100</span>
+        <span style="font-size:0.82rem;color:#666;margin-top:4px;display:block;">$100 off your first treatment</span>
+      </div>
+
+      <p style="text-align:center;"><span class="cta">Finish my questionnaire</span></p>
+
+      <p style="font-size:0.82rem;color:#888;text-align:center;">No obligation. No charge unless approved.</p>
+
+      <p>[KEEP: footer]</p>
+
+      <p style="font-size:0.75rem;color:#aaa;">Valid for new patients. One use per customer. Cannot be combined with other offers.</p>
+    </div>
+
+    <div class="gab-task">
+      <strong>Gabriela:</strong> (1) Fix promo code: EFFECTY5 → EFFECTY100. (2) Fix CTA: "Earn 6% Today" → "Finish my questionnaire." (3) Change headline: "Last Chance!" → "We've Been Holding Your Spot." (4) Delete entire "It's Time to Invest in Your Health" values section (More than just Telemedicine / We've Been There / The Support You Need / Clarity in Cost). Replace with the bullet list above. (5) Delete "Looking For A Different Treatment?" cross-sell section. (6) Delete "Something holding you back?" section + "Tell Us More" CTA. Replace with one line: "No obligation. No charge unless approved." (7) Email should go from ~5,750px down to ~2,500px. Same frame, just delete sections.
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================================ -->
+<!-- EMAIL 7 -->
+<!-- ================================================================ -->
+<div class="email-block">
+  <div class="email-header">
+    <h3>Email 7: Sema vs. Tirz Comparison</h3>
+    <span class="tag tag-redo">Redo</span>
+  </div>
+  <div class="email-meta">
+    <div class="meta-row"><span class="meta-label">Timing</span><span>+7-10 days post-abandonment</span></div>
+    <div class="meta-row"><span class="meta-label">Replaces</span><span>Old Email 5 ("Looking Beyond Weight Loss?" with Estradiol, NAD+, MK-1903, Sermorelin)</span></div>
+    <div class="meta-row"><span class="meta-label">Sender</span><span>Effecty &lt;hello@effecty.com&gt;</span></div>
+    <div class="meta-row"><span class="meta-label">Target Height</span><span>Under 3,500px</span></div>
+  </div>
+  <div class="email-body">
+    <h4>Subject Lines</h4>
+    <table class="sl-table">
+      <thead><tr><th>Var</th><th>Subject Line</th><th>Chars</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Semaglutide vs. Tirzepatide, explained</td><td>39</td></tr>
+        <tr><td>B</td><td>Not sure which option fits you best?</td><td>36</td></tr>
+        <tr><td>C</td><td>The guide your doctor would send you</td><td>37</td></tr>
+      </tbody>
+    </table>
+    <div class="meta-row"><span class="meta-label">Preview Text</span><span>Two proven options. One works on one receptor, the other on two. Here's the honest comparison. (90 chars)</span></div>
+
+    <h4>Copy</h4>
+    <div class="copy-block">
+      <p>[KEEP: effecty. header, product vial photography style]</p>
+
+      <p class="hl">Two Options. Here's How to Choose.</p>
+
+      <p>If you've been doing your research (and you should be), you've probably seen two names come up: <strong>Semaglutide</strong> and <strong>Tirzepatide</strong>. Both are GLP-1 medications that have helped millions of patients. But they work differently, and one might be a better fit for your goals.</p>
+
+      <p>Here's the straightforward comparison.</p>
+
+      <div class="compare">
+        <div class="compare-col">
+          <h5>Semaglutide</h5>
+          <p style="font-size:0.82rem;color:#666;margin-bottom:10px;">The proven original</p>
+          <ul>
+            <li>Works on GLP-1 receptors</li>
+            <li>Avg. 15% body weight reduction*</li>
+            <li>Once-weekly injection</li>
+            <li>Longer track record, well-studied</li>
+            <li>Great first option for most patients</li>
+          </ul>
+          <p style="margin-top:12px;"><strong>From $XXX/month</strong></p>
+        </div>
+        <div class="compare-col">
+          <h5>Tirzepatide</h5>
+          <p style="font-size:0.82rem;color:#666;margin-bottom:10px;">The dual-action option</p>
+          <ul>
+            <li>Works on GLP-1 AND GIP receptors</li>
+            <li>Avg. 20-22% body weight reduction*</li>
+            <li>Once-weekly injection</li>
+            <li>Newer, with strong clinical data</li>
+            <li>Available with B12 for energy support</li>
+          </ul>
+          <p style="margin-top:12px;"><strong>From $XXX/month</strong></p>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;color:#999;">*Based on STEP trials (semaglutide) and SURMOUNT trials (tirzepatide). These results are from branded medications in clinical settings. Individual results with compounded formulations may vary.</p>
+
+      <p><strong>Still not sure?</strong> That's exactly what the questionnaire is for. Once you complete it, your provider will evaluate your health profile and recommend the treatment that fits your goals and your budget. You don't have to decide between them yourself.</p>
+
+      <p>Both options are <strong>$100 off</strong> with code <strong>EFFECTY100</strong>.</p>
+
+      <div class="promo">
+        <span class="code-label">Your code</span>
+        <span class="code">EFFECTY100</span>
+        <span style="font-size:0.82rem;color:#666;margin-top:4px;display:block;">$100 off your first treatment</span>
+      </div>
+
+      <p style="text-align:center;"><span class="cta">Find my personalized plan</span></p>
+
+      <p style="font-size:0.82rem;color:#888;text-align:center;">2-minute questionnaire. Provider reviews within 24 hours. No charge unless approved.</p>
+
+      <p>[KEEP: footer]</p>
+
+      <p style="font-size:0.75rem;color:#aaa;">Effecty provides compounded GLP-1 medication formulated by licensed U.S. pharmacies. Compounded medications are not FDA-approved versions of branded products. Valid for new patients. One use per customer.</p>
+    </div>
+
+    <div class="gab-task">
+      <strong>Gabriela:</strong> (1) Delete ALL current content: "Looking Beyond Weight Loss?" headline, "What's Your Main Health Goal?" section, Menopause Relief column (Estradiol patches/gel/tablets), Longevity column (NAD+, MK-1903, Sermorelin), and all associated CTAs. (2) Build a 2-column comparison table (Sema vs Tirz) using the same 2-column layout that already exists in this email. Just swap the content. (3) ADD the EFFECTY100 promo code block (currently this email has zero offer). (4) ADD the compounding disclaimer in small print below the comparison. (5) Rename inner Figma frame from "Valentine's Day Angle" to "Sema vs Tirz Comparison." <strong>Need Sema and Tirz plan prices from client.</strong>
+    </div>
+  </div>
+</div>
+
 
 <hr>
-
-<h2>Total Effort Summary</h2>
-
-<table class="summary-table">
-  <thead><tr><th>Email</th><th>Changes</th><th>Effort</th></tr></thead>
-  <tbody>
-    <tr><td>Email 1</td><td>3 copy swaps + 1 badge add</td><td>30 min</td></tr>
-    <tr><td>Email 2A</td><td>Replace values block, shorten testimonials, add pricing + provider + reduce CTAs</td><td>1-2 hrs</td></tr>
-    <tr><td>Email 2B</td><td>Fix preview text, update code, cut FAQ</td><td>20 min</td></tr>
-    <tr><td>Email 3A</td><td>Flip to social proof, add testimonials + Trustpilot, single CTA</td><td>1-2 hrs</td></tr>
-    <tr><td>Email 3B</td><td>Delete from flow</td><td>5 min</td></tr>
-    <tr><td>Email 4</td><td>Fix code, new headline, kill values + cross-sell + redirect</td><td>1 hr</td></tr>
-    <tr><td>Email 5</td><td>Content swap to Sema vs Tirz, add offer, add disclaimer</td><td>1-2 hrs</td></tr>
-    <tr style="background:#f0fdf4;"><td><strong>Total</strong></td><td><strong>22 changes across 7 emails</strong></td><td><strong>5-8 hours</strong></td></tr>
-  </tbody>
-</table>
 
 <div class="footer">
   <div class="footer-brand">GrowthTrigger</div>
   <div class="footer-tagline">Lifecycle Marketing for Telehealth</div>
-  <p style="font-size: 0.8rem; color: #aaa; margin-top: 12px;">Prepared for Gabriela. Based on Figma audit (March 2026), triage analysis, and website gap analysis.</p>
+  <p style="font-size: 0.8rem; color: #aaa; margin-top: 12px;">7 emails. Production copy for Gabriela. Based on Figma audit, 365-day performance data, website gap analysis, and Effecty brand profile. March 17, 2026.</p>
 </div>
 
 </body>
